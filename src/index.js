@@ -9,6 +9,7 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root')
+  // Rendering the App component in index.html file
 );
 
 // If you want to start measuring performance in your app, pass a function
