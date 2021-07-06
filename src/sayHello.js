@@ -7,7 +7,7 @@ function Hello() {
 
   return (
     <div>
-      <h1>Hello React</h1>
+      <h1>This is the Hello Component</h1>
       <button onClick={sayHello}>Hello</button>
     </div>
   )
