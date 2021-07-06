@@ -1,4 +1,5 @@
 import React from 'react';
+import Hello from './sayHello';
 
 // Using <div> inside a function - how?
 // That's why import React here
@@ -11,15 +12,9 @@ import React from 'react';
 // because that would invoke the function as soon as it is rendered on the screen
 
 function App() {
-
-  const sayHello = () => {
-    console.log('hello');
-  }
-
   return (
     <div>
-      <h1>Hello React</h1>
-      <button onClick={sayHello}>Hello</button>
+      <Hello />
     </div>
   )
 }
