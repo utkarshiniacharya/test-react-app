@@ -14,10 +14,10 @@ import Tweet from './Tweet';
 function App() {
   return (
     <div className="App">
-      <Tweet name="Lights"/>
-      <Tweet name="Filter"/>
-      <Tweet name="Moon"/>
-      <Tweet name="Hope"/>
+      <Tweet name="Lights" message="light, light, light, light" />
+      <Tweet name="Filter" message="filter, filter, filter"/>
+      <Tweet name="Moon" message="moon, moon, moon, moon"/>
+      <Tweet name="Hope" message="hope, hope, hope, hope"/>
     </div>
   )
 }
