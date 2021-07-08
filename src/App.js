@@ -14,8 +14,10 @@ import Tweet from './Tweet';
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
-      <Tweet />
+      <Tweet name="Lights"/>
+      <Tweet name="Filter"/>
+      <Tweet name="Moon"/>
+      <Tweet name="Hope"/>
     </div>
   )
 }
