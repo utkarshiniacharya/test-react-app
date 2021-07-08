@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Tweet from "./Tweet";
 import './App.css';
 
 // Using <div> inside a function - how?
@@ -13,13 +14,19 @@ import './App.css';
 
 function App() {
 
-  const [isRed, setRed] = useState(false);
-  const [count, setCount] = useState(0);
+  // const [isRed, setRed] = useState(false);
+  // const [count, setCount] = useState(0);
 
-  const increment = () => {
-    setCount(count + 1);
-    setRed(!isRed);
-  }
+  // const increment = () => {
+  //   setCount(count + 1);
+  //   setRed(!isRed);
+
+  const [users, setUsers] = useState([
+    { name: "Lights", message: "light, light, light, light" },
+    { name: "Filter", message: "filter, filter, filter" },
+    { name: "Moon", message: "moon, moon, moon, moon" },
+    { name: "Hope", message: "hope, hope, hope, hope" }
+  ])
 
   return (
     <div className="App">
@@ -27,9 +34,14 @@ function App() {
       <Tweet name="Filter" message="filter, filter, filter"/>
       <Tweet name="Moon" message="moon, moon, moon, moon"/>
       <Tweet name="Hope" message="hope, hope, hope, hope"/> */}
-      <h1 className={isRed ? "red" : ""}>Change my color!</h1>
+
+      {/* <h1 className={isRed ? "red" : ""}>Change my color!</h1>
       <button onClick={increment}>Increment</button>
-      <h1>{count}</h1>
+      <h1>{count}</h1> */}
+      {users.map(user =>(
+        <Tweet name={user.name} message={user.message} />
+      ))}
+
     </div>
   )
 }
