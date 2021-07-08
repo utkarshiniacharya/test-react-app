@@ -1,5 +1,5 @@
-import React from 'react';
-import Tweet from './Tweet';
+import React, { useState } from 'react';
+import './App.css';
 
 // Using <div> inside a function - how?
 // That's why import React here
@@ -12,12 +12,24 @@ import Tweet from './Tweet';
 // because that would invoke the function as soon as it is rendered on the screen
 
 function App() {
+
+  const [isRed, setRed] = useState(false);
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+    setRed(!isRed);
+  }
+
   return (
     <div className="App">
-      <Tweet name="Lights" message="light, light, light, light" />
+      {/* <Tweet name="Lights" message="light, light, light, light" />
       <Tweet name="Filter" message="filter, filter, filter"/>
       <Tweet name="Moon" message="moon, moon, moon, moon"/>
-      <Tweet name="Hope" message="hope, hope, hope, hope"/>
+      <Tweet name="Hope" message="hope, hope, hope, hope"/> */}
+      <h1 className={isRed ? "red" : ""}>Change my color!</h1>
+      <button onClick={increment}>Increment</button>
+      <h1>{count}</h1>
     </div>
   )
 }
